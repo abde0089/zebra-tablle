@@ -1,0 +1,57 @@
+tr:nth-child(even), .time::before  {
+    background-color: hsl(166, 100%, 89%);
+    content: "";
+    height: 100% ;
+    left: 0;
+    top: 0px;
+    position: absolute;
+    width:10000px;
+    z-index: -5;
+   
+}
+    tr:nth-child(odd), .time::before {
+    background-color: transparent;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 10000px;
+    z-index: -5;
+    top: 0px;
+}
+
+table {
+overflow: hidden;
+    width: 80%;
+    height: auto;
+}
+caption{
+font-size: 2em;
+}
+
+td, th{
+
+    padding: 5px;
+    width: 10%;
+    position: relative;
+}
+
+tr:hover { 
+    background-color: peachpuff;
+}
+td:hover::after, 
+th:hover::after {
+    background-color: yellow;
+    content: "";
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+}
+@media all and  (min-width: 600px) and (max-width: 1500px){
+table {
+    width: 80%;   
+}
+}
